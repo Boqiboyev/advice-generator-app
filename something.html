@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #333;
+    }
+    button {
+      /* padding: 10px; */
+      width: 80px;
+      height: 33px;
+      text-transform: uppercase;
+      color: white;
+      font-weight: 700;
+      letter-spacing: 1px;
+      background-color: rgb(255, 174, 0);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <button>Money</button>
+
+  <script>
+    const button = document.querySelector('button');
+    let position = 0;
+
+    button.addEventListener('mouseover', ()=>{
+      position ? (position = 0) : (position=150);
+      button.style.transform = `translate(${position}px)`;
+      button.style.transition = `all 0.3s ease`
+    })
+
+    button.addEventListener('click', ()=>{
+      alert("Hahaha, i got you :D")
+    })
+  </script>
+</body>
+</html>
